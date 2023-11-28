@@ -1,0 +1,28 @@
+Write a function soup(matrix, word) that, given a matrix of letters, returns the first location of the word in the matrix, or None if not found.
+
+For example, let's say we have the following matrix and are trying to find the word "PORTO".
+
+1	2	3	4	5	6
+A	X	R	Z	B	H	A
+B	K	A	S	I	G	O
+C	J	O	T	C	A	N
+D	F	S	R	H	T	U
+E	D	P	O	O	X	F
+F	Z	B	B	W	F	S
+Then the function returns "E2" because the word starts in line=E, column=2.
+
+Notice that the words can use any cardinal direction: north, east, south, west.
+
+All letters are given in upper-case and the function returns the first occurrence of the word using lexicographical order (i.e. if the word can be found in "A4" and "B2", then it returns "A4"). You may want to use chr() and ord() to have the line as a letter.
+
+Hint: write an auxiliary recursive function soup_rec(matrix, word, line, col) that attempts to find a word at a given line and column. The function soup should just call this auxiliary function with suitable arguments.
+
+
+print(soup([['X', 'R', 'Z', 'B', 'H', 'A'], ['K', 'A', 'S', 'I', 'G', 'O'], ['J', 'O', 'T', 'C', 'A', 'N'], ['F', 'S', 'R', 'H', 'T', 'U'], ['D', 'P', 'O', 'O', 'X', 'F'], ['Z', 'B', 'B', 'W', 'F', 'S']], 'PORTO'))
+E2
+print(soup([['X', 'R', 'Z', 'B', 'H', 'A'], ['K', 'A', 'S', 'I', 'G', 'O'], ['J', 'O', 'T', 'C', 'A', 'N'], ['F', 'S', 'R', 'H', 'T', 'U'], ['D', 'P', 'O', 'O', 'X', 'F'], ['Z', 'B', 'B', 'W', 'F', 'S']], 'OASIS'))
+C2
+print(soup([['X', 'R', 'Z', 'B', 'H', 'A'], ['K', 'A', 'S', 'I', 'G', 'O'], ['J', 'O', 'T', 'C', 'A', 'N'], ['F', 'S', 'R', 'H', 'T', 'U'], ['D', 'P', 'O', 'O', 'X', 'F'], ['Z', 'B', 'B', 'W', 'F', 'S']], 'GATUNO'))
+B5
+print(soup([['X', 'R', 'Z', 'B', 'H', 'A'], ['K', 'A', 'S', 'I', 'G', 'O'], ['J', 'O', 'T', 'C', 'A', 'N'], ['F', 'S', 'R', 'H', 'T', 'U'], ['D', 'P', 'O', 'O', 'X', 'F'], ['Z', 'B', 'B', 'W', 'F', 'S']], 'TACOS'))
+None
