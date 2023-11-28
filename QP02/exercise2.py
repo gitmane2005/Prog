@@ -1,0 +1,10 @@
+n = int(input())
+
+n_thousands = n - (n%1000)
+n_hundreds = (n - n_thousands) - (n%100)
+n_dozens = (n - n_thousands - n_hundreds)- (n%10)
+n_units = (n - n_thousands - n_hundreds - n_dozens)
+print(n_thousands)
+print(n_hundreds)
+print(n_dozens)
+print(n_units)
