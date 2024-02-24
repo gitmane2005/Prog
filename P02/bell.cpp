@@ -1,7 +1,5 @@
 #include <iostream>
-
 using namespace std;
-
 unsigned long bc(unsigned long n, unsigned long k){
     unsigned long upper = 1;
     unsigned long lower1 = 1;
@@ -18,6 +16,13 @@ unsigned long bc(unsigned long n, unsigned long k){
     unsigned long result = upper/(lower1*lower2);
     return result;
 }
-int main(){
-    cout << bc(2, 2) << '\n';
+
+unsigned long bell(unsigned long n){
+    unsigned long sum = 0;
+    if(n == 0 || n == 1)
+        return 1;
+    for(unsigned long k = 0; k<= n-1; k++){
+        sum += bc(n-1,k)*bell(k);
+    }
+    return sum;
 }

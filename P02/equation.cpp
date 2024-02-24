@@ -11,13 +11,13 @@ int solve_eq(int a, int b, int c, double& x1, double& x2){
     }
     else if (delta == 0)
     {
-        x1 = -b/(2*a);
+        x1 = -b/(2.0*a);
         x2 = NAN;
         return 1;
     }
     else{
-        x1 = (-b - sqrt(delta))/(2*a);
-        x2 = (-b + sqrt(delta))/(2*a);
+        x1 = (-b - sqrt(delta))/(2.0*a);
+        x2 = (-b + sqrt(delta))/(2.0*a);
         return 2;
     }
 }
