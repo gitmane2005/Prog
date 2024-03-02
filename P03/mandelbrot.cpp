@@ -20,9 +20,3 @@ void mandelbrot(const complex& c, unsigned int n, complex& z_n){
         z_n = add(mul(z_n, z_n), c);
     }
 }
-int main(){ 
-    { complex z_n;
-  mandelbrot({0.1, 3.2}, 4, z_n);
-  cout << z_n << '\n'; }
-  return 0;
-}
