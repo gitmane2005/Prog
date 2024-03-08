@@ -1,0 +1,19 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/manuelpedro/Documents/Prog/P04/trim'
+relocations:
+  - { offsetInCU: 0xB4, offset: 0xB4, size: 0x8, addend: 0x0, symName: __Z7is_charc, symObjAddr: 0x0, symBinAddr: 0x100007BD0, symSize: 0x4C }
+  - { offsetInCU: 0x3206, offset: 0x3206, size: 0x8, addend: 0x0, symName: __ZStL8__ioinit, symObjAddr: 0xE698, symBinAddr: 0x10000C020, symSize: 0x0 }
+  - { offsetInCU: 0x350C, offset: 0x350C, size: 0x8, addend: 0x0, symName: __ZNSt8__detail30__integer_to_chars_is_unsignedIjEE, symObjAddr: 0x2DC, symBinAddr: 0x100007EFC, symSize: 0x0 }
+  - { offsetInCU: 0x3526, offset: 0x3526, size: 0x8, addend: 0x0, symName: __ZNSt8__detail30__integer_to_chars_is_unsignedImEE, symObjAddr: 0x2DD, symBinAddr: 0x100007EFD, symSize: 0x0 }
+  - { offsetInCU: 0x3540, offset: 0x3540, size: 0x8, addend: 0x0, symName: __ZNSt8__detail30__integer_to_chars_is_unsignedIyEE, symObjAddr: 0x2DE, symBinAddr: 0x100007EFE, symSize: 0x0 }
+  - { offsetInCU: 0x3566, offset: 0x3566, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_trim.cpp, symObjAddr: 0x2A0, symBinAddr: 0x100007E70, symSize: 0x14 }
+  - { offsetInCU: 0x3592, offset: 0x3592, size: 0x8, addend: 0x0, symName: __Z41__static_initialization_and_destruction_0v, symObjAddr: 0x264, symBinAddr: 0x100007E34, symSize: 0x3C }
+  - { offsetInCU: 0x359A, offset: 0x359A, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_trim.cpp, symObjAddr: 0x2A0, symBinAddr: 0x100007E70, symSize: 0x14 }
+  - { offsetInCU: 0x358E, offset: 0x358E, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x1B4, symBinAddr: 0x100007D84, symSize: 0xB0 }
+  - { offsetInCU: 0x3596, offset: 0x3596, size: 0x8, addend: 0x0, symName: __Z41__static_initialization_and_destruction_0v, symObjAddr: 0x264, symBinAddr: 0x100007E34, symSize: 0x3C }
+  - { offsetInCU: 0x35F3, offset: 0x35F3, size: 0x8, addend: 0x0, symName: __Z4trimPc, symObjAddr: 0x4C, symBinAddr: 0x100007C1C, symSize: 0x168 }
+  - { offsetInCU: 0x35FB, offset: 0x35FB, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x1B4, symBinAddr: 0x100007D84, symSize: 0xB0 }
+  - { offsetInCU: 0x36B4, offset: 0x36B4, size: 0x8, addend: 0x0, symName: __Z7is_charc, symObjAddr: 0x0, symBinAddr: 0x100007BD0, symSize: 0x4C }
+  - { offsetInCU: 0x36BC, offset: 0x36BC, size: 0x8, addend: 0x0, symName: __Z4trimPc, symObjAddr: 0x4C, symBinAddr: 0x100007C1C, symSize: 0x168 }
+...
