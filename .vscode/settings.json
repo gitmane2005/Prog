@@ -10,6 +10,8 @@
         "string": "cpp",
         "string_view": "cpp",
         "unordered_map": "cpp",
-        "vector": "cpp"
-    }
+        "vector": "cpp",
+        "iostream": "cpp"
+    },
+    "makefile.makefilePath": "https://vscode.dev/github/gitmane2005/Prog/blob/main/Makefile.txt"
 }
