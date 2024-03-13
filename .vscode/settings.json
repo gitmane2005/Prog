@@ -11,7 +11,8 @@
         "string_view": "cpp",
         "unordered_map": "cpp",
         "vector": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "new": "cpp"
     },
     "makefile.makefilePath": "https://vscode.dev/github/gitmane2005/Prog/blob/main/Makefile.txt"
 }
