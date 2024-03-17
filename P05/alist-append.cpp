@@ -15,7 +15,7 @@ void append(alist* a, const alist* b){
         arr[i] = b->elements[t];
         t++;
     }
-    delete [] a->elements;td;
+    delete [] a->elements;
     a->size = new_lenthg;
     a->elements = arr;
 }
