@@ -12,7 +12,7 @@ int main()
     int t1 = s1.find('k', 0);
  
     // prints the result
-    cout << "String is: " << type(t1);
+    cout << "String is: " << s1.size();
  
     return 0;
 }
