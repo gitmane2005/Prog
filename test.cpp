@@ -1,18 +1,10 @@
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
  
 int main()
 {
-    // Take any string
-    string s1 = "Geeks";
- 
-    // Copy two characters of s1 (starting
-    // from position 3)
-    int t1 = s1.find('k', 0);
- 
-    // prints the result
-    cout << "String is: " << s1.size();
- 
+    vector<int> iv { 1, 2, 3 };
     return 0;
 }
