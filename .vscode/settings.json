@@ -14,7 +14,8 @@
         "iostream": "cpp",
         "new": "cpp",
         "ostream": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "typeinfo": "cpp"
     },
     "makefile.makefilePath": "https://vscode.dev/github/gitmane2005/Prog/blob/main/Makefile.txt"
 }

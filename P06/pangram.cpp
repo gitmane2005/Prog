@@ -21,7 +21,6 @@ bool pangram(const string& s, string& m){
         }
         i++;
     }
-
     int index = 0;
     for(int j = 0; j < 26; j++){
         if(arr[j] == 0){
@@ -29,7 +28,6 @@ bool pangram(const string& s, string& m){
             index++;
         }
     }
-    
     if(index == 0){
         return true;
     }
