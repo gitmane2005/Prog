@@ -1,22 +1,18 @@
 #include <iostream>
 #include <string> 
 using namespace std;
-string g = "xyz";
+string g = "SADN adkfjb aksjdfb";
 
+void to_upper( string& pila){
+    for(int i = 0; i < pila.length(); i++){
+        pila[i] = toupper(pila[i]);
+    }
+}
 
 int main () {
-    string inp; 
-    cin >> inp;
-    if (inp. length () < 2) {
-        string inp2 = "abc";
-        inp2.append(inp);
-        cout << inp2 << '\n';
-    }
-    else{
-        string* inp3 = new string ("ghi");
-        inp3 -> append(g) ;
-        cout << (*inp3) << '\n';
-    
-    }
+    string fjh = g;
+    to_upper(fjh);
+    cout << g << endl;
+    cout << fjh << endl;
     return 0;
 }
