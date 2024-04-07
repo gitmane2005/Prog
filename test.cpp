@@ -1,9 +1,19 @@
 #include <iostream>
-#include <string> 
+#include <string>
+#include <sstream>
+#include <vector>
 using namespace std;
-string g = " DN  SD fb";
 int main () {
-    
-    cout << g.size() << endl;
-    return 0;
+    vector<string> a { "Portugal", "Spain", "France", "England" };
+    vector<string> b;
+    for (string& s : a) {
+        if (s.length() > 6) {
+            b.push_back(s);
+            s = "-";
+        }
+    }
+    for (string s: a) cout << s;
+    cout << '\n';
+    for (string s : b) cout << s;
+    cout << '\n';
 }
