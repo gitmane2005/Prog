@@ -2,6 +2,9 @@
     "files.associations": {
         "istream": "cpp",
         "ios": "cpp",
-        "iostream": "cpp"
-    }
+        "iostream": "cpp",
+        "cstddef": "cpp",
+        "string": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "enabled"
 }
