@@ -4,7 +4,9 @@
         "ios": "cpp",
         "iostream": "cpp",
         "cstddef": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "sstream": "cpp",
+        "iomanip": "cpp"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }

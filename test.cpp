@@ -4,7 +4,10 @@
 #include <vector>
 using namespace std;
 int main () {
-    string t = "23";
-    int value = t.to_integer()
-    cout << value;
+    string yyyymmdd = "00010101";
+
+    cout << yyyymmdd.substr(0, 4) << endl;
+    cout << yyyymmdd.substr(5, ) << endl;
+    cout << yyyymmdd.substr(8,yyyymmdd.size()) << endl;
+    return 0;
 }
