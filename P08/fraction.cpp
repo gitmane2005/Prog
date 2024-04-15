@@ -1,8 +1,6 @@
 #include <iostream>
 
 
-#include "fraction_aux.h"
-
 using namespace std;
 
 class Fraction
@@ -10,15 +8,15 @@ class Fraction
     public:
     Fraction();
     Fraction(int numerator, int denominator);
-    int numerator() const;
-    int denominator() const;
-    void sum(const Fraction& right);
-    void sub(const Fraction& right);
-    void mul(const Fraction& right);
-    void div(const Fraction& right);
+    int get_numerator() const;
+    int get_denominator() const;
+    Fraction sum(const Fraction& right);
+    Fraction sub(const Fraction& right);
+    Fraction mul(const Fraction& right);
+    Fraction div(const Fraction& right);
     int gcd(int a, int b);
     void normalise();
-    void write();
+    void write() const;
     
     private:
     int numerator;
@@ -35,39 +33,73 @@ Fraction::Fraction(int numerator, int denominator){
     this->denominator = denominator;
     normalise();
 }
-int Fraction::numerator() const{
+int Fraction::get_numerator() const{
     return numerator;
 }
-int Fraction::denominator() const{
+int Fraction::get_denominator() const{
     return denominator;
 }
 
-void Fraction::sum(const Fraction& right){
-    int a = right.numerator();
-    int b = right.denominator();
-    numerator = numerator*b + denominator*a;
-    dedenominator = dedenominator*b;
-    normalise();
+Fraction Fraction::sum(const Fraction& right){
+    int a = right.numerator;
+    int b = right.denominator;
+    int res_numerator = numerator*b + denominator*a;
+    int res_denominator = denominator*b;
+    Fraction res(res_numerator,res_denominator);
+    res.normalise();
+    return res;
 }
-void Fraction::sub(const Fraction& right){
-    int a = right.numerator();
-    int b = right.denominator();
-    numerator = numerator*b - denominator*a;
-    denominator = dedenominator*b;
-    normalise();
+Fraction Fraction::sub(const Fraction& right){
+    int a = right.numerator;
+    int b = right.denominator;
+    int res_numerator = numerator*b - denominator*a;
+    int res_denominator = denominator*b;
+    Fraction res(res_numerator,res_denominator);
+    res.normalise();
+    return res;
 }
-void Fraction::mul(const Fraction& right){
-    int a = right.numerator();
-    int b = right.denominator();
-    numerator = numerator*a;
-    dedenominator = dedenominator*b;
-    normalise();
+Fraction Fraction::mul(const Fraction& right){
+    int a = right.numerator;
+    int b = right.denominator;
+    int res_numerator = numerator*a;
+    int res_denominator = denominator*b;
+    Fraction res(res_numerator,res_denominator);
+    res.normalise();
+    return res;
 }
-void Fraction div(const Fraction& right){
-    int a = right.numerator();
-    int b = right.denominator();
-    numerator = numerator*b;
-    dedenominator = dedenominator*a;
-    normalise();
+Fraction Fraction::div(const Fraction& right){
+    int a = right.numerator;
+    int b = right.denominator;
+    int res_numerator = numerator*b;
+    int res_denominator = denominator*a;
+    Fraction res(res_numerator,res_denominator);
+    res.normalise();
+    return res;
 }
 
+
+//! Compute the gcd of two numbers.
+int Fraction::gcd(int a, int b) {
+  while (b != 0) {
+    int tmp = a;
+    a = b;
+    b = tmp % b;
+  }
+  return a;
+}
+
+//! Normalize a fraction.
+void Fraction::normalise() {
+  int g = gcd(numerator, denominator);
+  numerator /= g;
+  denominator /= g;
+  if (denominator < 0) {
+    numerator = - numerator;
+    denominator = - denominator;
+  }
+}
+
+// shows fraction on the screen
+void Fraction::write() const {
+  cout << numerator << '/' << denominator;
+}
