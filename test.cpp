@@ -4,10 +4,7 @@
 #include <vector>
 using namespace std;
 int main () {
-    string yyyymmdd = "00010101";
-
-    cout << yyyymmdd.substr(0, 4) << endl;
-    cout << yyyymmdd.substr(5, ) << endl;
-    cout << yyyymmdd.substr(8,yyyymmdd.size()) << endl;
+    vector<int> ma = {1,2,4,56};
+    cout << ma[ma.size()-1];
     return 0;
 }
