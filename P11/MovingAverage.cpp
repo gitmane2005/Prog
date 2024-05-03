@@ -8,32 +8,30 @@ MovingAverage::MovingAverage(std::size_t n){
 }
 
 void MovingAverage::update(double value){
-    if(values_.size() > n_){
+    if(values_.size() >= n_){
         values_.pop_front();
+        values_.push_back(value);
+    }
+    else{
         values_.push_back(value);
     }
 }
 
 double MovingAverage::get() const{
-    auto itr = values_.begin();
     double sum = 0;
-    while (itr != values_.end()){
-        itr++;
-        sum += *itr;
+    for (auto it = values_.begin(); it != values_.end(); ++it){
+        sum += *it;
     }
-    return sum/n_;    
+    return sum/values_.size();    
 }
 
-int main(){
-    { MovingAverage ma(1);
-  const MovingAverage& r = ma;
-  ma.update(1.0);
-  cout << fixed << setprecision(2) << r.get() << '\n'; }
-  return 0;
-}
-
-
-
-
-
-
+// int main(){
+// { MovingAverage ma(2);
+//   double a[] { 1.2, 3.4, 5.0 };
+//   for (double x : a) {
+//     ma.update(x);
+//     cout << fixed << setprecision(2) <<  ma.get() << ' ';
+//   }
+//   cout << fixed << setprecision(2) <<  ma.get() << '\n'; }
+//   return 0;
+// }
