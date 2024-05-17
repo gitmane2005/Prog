@@ -2,10 +2,16 @@
 #include <string>
 #include <sstream>
 #include <vector>
+#include <deque>
+#include <list>
 using namespace std;
 
 int main(){
-    string pila = "eadfadfçç";
-    cout << pila.length();
-    return 0;
+    vector<int> v { 10, 20, 30, 40, 50, 60};
+    v. erase(v. begin());
+    v. insert (v.begin() + 1, 99); v.erase(v.end () - 2);
+    v. insert(v.end () - 1, 99) ; 
+    for (int x : v)
+         cout << x << ' ';
+
 }

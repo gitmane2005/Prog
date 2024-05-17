@@ -99,7 +99,9 @@
         "__memory": "cpp",
         "regex": "cpp",
         "future": "cpp",
-        "forward_list": "cpp"
+        "forward_list": "cpp",
+        "condition_variable": "cpp",
+        "semaphore": "cpp"
     },
     "C_Cpp.errorSquiggles": "enabled"
 }

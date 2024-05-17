@@ -4,7 +4,13 @@
 
 
 bool max_filter(std::vector<std::vector<int>> &v, int n){
-    
+    if(n%2 == 0 || v.size() < n){
+        return false;
+    }
+    for(int i = 0; i < v.size(), i++){
+        
+    }
+
 }
 
 void show_vector(const std::vector<std::vector<int>>& v) {
